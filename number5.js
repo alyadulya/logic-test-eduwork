@@ -1,18 +1,12 @@
 const bilangan = angka => {
     let bilanganAngka = '';
-    let satuan = ['', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan'];
+    let satuan = ['', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas'];
 
     if (angka < 1 || angka > 100) {
         bilanganAngka = 'silahkan masukkan bilangan 1-100';
     } else {
-        if (angka < 10) {
+        if (angka <= 11) {
             bilanganAngka = satuan[angka];
-        }
-        if (angka === 10) {
-            bilanganAngka = "sepuluh";
-        }
-        if (angka === 11) {
-            bilanganAngka = "sebelas";
         }
         if (angka > 11) {
             bilanganAngka = satuan[angka%10] + " belas";
